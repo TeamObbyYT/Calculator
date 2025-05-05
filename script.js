@@ -82,14 +82,25 @@ function animateButton(value) {
 // Keyboard support
 document.addEventListener('keydown', (e) => {
   const key = e.key;
+
   if (!isNaN(key) || ['+', '-', '*', '/', '.'].includes(key)) {
-    appendNumber(key);
+    e.preventDefault();
+    if (display.innerText === '0') {
+      display.innerText = key;
+    } else {
+      display.innerText += key;
+    }
+    animateButton(key);
+    updatePreview();
   } else if (key === 'Enter') {
     e.preventDefault();
     calculate();
   } else if (key === 'Backspace') {
+    e.preventDefault();
     deleteLast();
   } else if (key === 'Escape') {
+    e.preventDefault();
     clearDisplay();
   }
 });
+

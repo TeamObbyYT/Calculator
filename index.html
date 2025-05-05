@@ -8,7 +8,10 @@
 </head>
 <body>
   <div class="calculator">
-    <div class="display" id="display">0</div>
+    <div class="display-wrapper">
+      <div class="display" id="display">0</div>
+      <div class="preview" id="preview"></div>
+    </div>
     <div class="buttons">
       <button class="btn" onclick="clearDisplay()">C</button>
       <button class="btn" onclick="appendOperator('/')">÷</button>

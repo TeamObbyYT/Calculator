@@ -32,15 +32,24 @@ body {
   border-radius: 10px;
   text-align: right;
   overflow-x: auto;
+  min-height: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#display-text {
+  flex: 1;
 }
 
 .preview {
-  position: absolute;
-  right: 10px;
-  bottom: -25px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: rgba(255, 255, 255, 0.5);
+  text-align: right;
+  margin-top: 5px;
 }
+
 
 .buttons {
   display: grid;

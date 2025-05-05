@@ -1,4 +1,4 @@
-const display = document.getElementById('display');
+const displayText = document.getElementById('display-text');
 const preview = document.getElementById('preview');
 
 function appendNumber(number) {
